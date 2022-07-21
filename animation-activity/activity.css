@@ -1,43 +1,66 @@
-.hamburger:hover > div:nth-child(1){
-  background-color: ghostwhite;
-  animation-name: top;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+.hamburger:hover>div:nth-child(1) {
+    background-color: ghostwhite;
+    animation-name: top;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
-.hamburger:hover > div:nth-child(2){
-  animation-name: middle;
-  animation-duration: .1s;
-  animation-fill-mode: forwards;
+.hamburger:hover>div:nth-child(2) {
+    animation-name: middle;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
 }
 
-.hamburger:hover > div:nth-child(3){
-  background-color: ghostwhite;
-  animation-name: bottom;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+.hamburger:hover>div:nth-child(3) {
+    background-color: ghostwhite;
+    animation-name: bottom;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 nav {
-  opacity: 0;
-  transition-duration: 1s;
+    opacity: 0;
+    transition-duration: 1s;
 }
 
-.hamburger:hover ~ nav {
-  opacity: 1;
+.hamburger:hover~nav {
+    opacity: 1;
 }
 
 @keyframes top {
-  from {}
-  to {}
+    from {
+        position: relative;
+        top: 35px;
+        transform: rotate(0deg);
+    }
+
+    to {
+        position: relative;
+        top: 35px;
+        transform: rotateZ(45deg);
+    }
 }
 
 @keyframes middle {
-  from {}
-  to {}
+    from {
+        visibility: hidden;
+    }
+
+    to {
+        visibility: hidden;
+    }
 }
 
 @keyframes bottom {
-  from {}
-  to {}
+    from {
+        position: relative;
+        bottom: 30px;
+        transform: rotate(0deg);
+    }
+
+    to {
+        position: relative;
+        bottom: 30px;
+        transform: rotate(-45deg);
+    }
 }
